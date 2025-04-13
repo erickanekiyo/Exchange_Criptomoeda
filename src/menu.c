@@ -7,7 +7,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
     int opcao;
     while (1) {
         printf("=====================================================\n");
-        printf("======================= OPÇÕES ======================\n");
+        printf("======================= OPCOES ======================\n");
         printf("=====================================================\n");
 
         printf("                1. Consultar saldo\n");
@@ -19,7 +19,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
         printf("                7. Atualizar cotação\n");
         printf("                8. Sair\n");
 
-        printf("Digite a opção: ");
+        printf("Digite a opcao: ");
         scanf("%d", &opcao);
 
         system("cls");
@@ -31,9 +31,9 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
             case 4: printf("==> Sacar\n"); break;
             case 5: printf("==> Comprar criptomoedas\n"); break;
             case 6: printf("==> Vender criptomoedas\n"); break;
-            case 7: printf("==> Atualizar cotação\n"); break;
+            case 7: printf("==> Atualizar cotacao\n"); break;
             case 8: printf("Saindo...\n"); exit(0);
-            default: printf("Opção inválida.\n");
+            default: printf("Opcao invalida.\n");
         }
 
         printf("\nPressione Enter para continuar...");
