@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,4 +40,3 @@ void verificacao(Usuario* usuario, Carteira* carteira) {
     tela_saldo();
     consultando(usuario, carteira);
 }
->>>>>>> Stashed changes

@@ -1,7 +1,11 @@
-#include "include/menu.h"
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "tipos.h"
+#include "format_cpf.h"
+#include "menu.h"
+#include "consultar_saldo.h"
+
 
 int main() {
     Usuario usuario;
@@ -12,9 +16,10 @@ int main() {
 
     usuario.cpf = 12345678900;
     usuario.senha = 1234;
+
     strcpy(usuario.nome, "Eric H. Kanekiyo");
 
-    
+
     menu(&usuario, &carteira, &cotacoes, &taxas);
 
     return 0;

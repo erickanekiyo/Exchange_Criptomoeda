@@ -1,14 +1,10 @@
 {
     "files.associations": {
         "menu.h": "c",
-<<<<<<< Updated upstream
-        "tipos.h": "c"
-=======
         "tipos.h": "c",
         "stdio.h": "c",
         "format_cpf.h": "c",
         "stdlib.h": "c",
         "consultar_saldo.h": "c"
->>>>>>> Stashed changes
     }
 }
