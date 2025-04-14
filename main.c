@@ -12,9 +12,10 @@ int main() {
 
     usuario.cpf = 12345678900;
     usuario.senha = 1234;
+
     strcpy(usuario.nome, "Eric H. Kanekiyo");
 
-    
+
     menu(&usuario, &carteira, &cotacoes, &taxas);
 
     return 0;

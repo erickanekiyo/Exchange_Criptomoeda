@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../include/menu.h"
+#include "../include/consultar_saldo.h"
+
 
 
 void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* cotacoes, struct Taxas* taxas) {
@@ -25,7 +27,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
         system("cls");
 
         switch (opcao) {
-            case 1: printf("==> Consultar saldo\n"); break;
+            case 1: verificacao(usuario, carteira); break;
             case 2: printf("==> Consultar extrato\n"); break;
             case 3: printf("==> Depositar\n"); break;
             case 4: printf("==> Sacar\n"); break;

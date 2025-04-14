@@ -1,24 +1,28 @@
 #ifndef TIPOS_H
 #define TIPOS_H
 
-#define MAX_NOME 50
+#define MAX_NOME 100
 
-typedef struct Usuario {
+enum { BITCOIN = 0, ETHEREUM, RIPPLE };
+
+typedef struct {
     char nome[MAX_NOME];
     long long cpf;
     int senha;
 } Usuario;
 
-typedef struct Carteira {
+typedef struct {
     double reais;
-    double cripto[3];
+    double bitcoin;
+    double ethereum;
+    double ripple;
 } Carteira;
 
-typedef struct Cotacoes {
+typedef struct {
     double cotacoes[3];
 } Cotacoes;
 
-typedef struct Taxas {
+typedef struct {
     double compra[3];
     double venda[3];
 } Taxas;
