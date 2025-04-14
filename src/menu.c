@@ -19,9 +19,9 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
         printf("                5. Comprar criptomoedas\n");
         printf("                6. Vender criptomoedas\n");
         printf("                7. Atualizar cotação\n");
-        printf("                8. Sair\n");
+        printf("                8. Sair\n\n");
 
-        printf("Digite a opcao: ");
+        printf("\nDigite a opcao: ");
         scanf("%d", &opcao);
 
         system("cls");
