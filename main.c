@@ -1,10 +1,10 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/tipos.h"
-#include "../include/format_cpf.h"
-#include "../include/menu.h"
-#include "../include/consultar_saldo.h"
+#include "tipos.h"
+#include "format_cpf.h"
+#include "menu.h"
+#include "consultar_saldo.h"
 
 
 int main() {
