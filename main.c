@@ -1,7 +1,10 @@
-#include "include/menu.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "../include/tipos.h"
+#include "../include/format_cpf.h"
+#include "../include/menu.h"
+#include "../include/consultar_saldo.h"
+
 
 int main() {
     Usuario usuario;

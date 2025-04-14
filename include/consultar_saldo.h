@@ -1,10 +1,11 @@
-#ifndef VERIFICACAO_H
-#define VERIFICACAO_H
+#ifndef CONSULTAR_SALDO_H
+#define CONSULTAR_SALDO_H
 
 #include "tipos.h"
+#include "format_cpf.h"
 
-void verificacao(Usuario* usuario, Carteira* carteira);
 void tela_saldo();
-void consultando(Usuario* usuario, Carteira* carteira);
+void consultando(struct Usuario* usuario, struct Carteira* carteira);
+void verificacao(struct Usuario* usuario, struct Carteira* carteira);
 
 #endif
