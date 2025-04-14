@@ -21,7 +21,7 @@ void invalidacao() {
 void invalido() {
     printf("               XXXXXXXXXXXXXXXXXXXX\n");
     printf("               XXXXX INVALIDO XXXXX\n");
-    printf("               XXXXXXXXXXXXXXXXXXXX\n");
+    printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
 }
 
 void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
@@ -38,7 +38,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         scanf("%d", &senha);
     }
 
-    system("cls");
+    system("cls || clear");
     tela_comprar();
 
     while (1) {
@@ -51,18 +51,19 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         printf("1. Bitcoin: R$%.2f\n", cotacoes->Bitcoin);
         printf("2. Ethereum: R$%.2f\n", cotacoes->Ethereum);
         printf("3. Ripple: R$%.2f\n", cotacoes->Ripple);
+        printf("0. Sair\n\n");
 
-        printf("\nDigite o numero da moeda: ");
+        printf("Digite o numero da moeda: ");
         scanf("%d", &tipo_moeda);
 
-        if (tipo_moeda < 1 || tipo_moeda > 3) {
-            system("cls");
+        if (tipo_moeda < 0 || tipo_moeda > 3) {
+            system("cls || clear");
             tela_comprar();
             invalido();
             continue;
         }
 
-        printf("Digite o valor a ser usado: R$");
+        printf("\nDigite o valor a ser usado: R$");
         scanf("%f", &comprar_valor);
 
         switch (tipo_moeda) {
@@ -83,7 +84,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         valor_retirado = comprar_valor + taxa;
 
         if (carteira->Reais < valor_retirado) {
-            system("cls");
+            system("cls || clear");
             tela_comprar();
             invalidacao();
             continue;
@@ -103,12 +104,16 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
                 break;
         }
 
+        if (tipo_moeda == 0 || comprar_valor == 0) {
+            return;
+        }
+
         carteira->Reais -= valor_retirado;
-        system("cls");
+        system("cls || clear");
         tela_comprar();
 
         const char* nome_moeda = tipo_moeda == 1 ? "BTC" : (tipo_moeda == 2 ? "ETH" : "XRP");
-        printf("COMPRA EFETUADA!\n");
+        printf("COMPRA EFETUADA!\n\n");
         printf("<[R$%.2f + TX: %.2f]>  ==> <[%.8f]>%s\n\n", comprar_valor, taxa, conversao, nome_moeda);
 
         consultando(usuario, carteira);

@@ -24,12 +24,11 @@ int main() {
     taxas.c_ripple = 0.01;
     taxas.v_ripple = 0.02;
 
-    cotacoes.Bitcoin = 385.747;
-    cotacoes.Ethereum = 14.229;
-    cotacoes.Ripple = 2.94;
+    cotacoes.Bitcoin = 385747;
+    cotacoes.Ethereum = 14229;
+    cotacoes.Ripple = 294;
 
     strcpy(usuario.nome, "Eric H. Kanekiyo");
-
 
     menu(&usuario, &carteira, &cotacoes, &taxas);
 

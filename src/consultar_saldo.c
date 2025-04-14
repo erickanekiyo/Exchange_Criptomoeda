@@ -30,7 +30,7 @@ void verificacao(Usuario* usuario, Carteira* carteira) {
 
     while (senha != usuario->senha) {
         printf("               XXXXXXXXXXXXXXXXXXXX\n");
-        printf("               XXXXX INVÁLIDO XXXXX\n");
+        printf("               XXXXX INVALIDO XXXXX\n");
         printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
         printf("                 SENHA: ");
         scanf("%d", &senha);
