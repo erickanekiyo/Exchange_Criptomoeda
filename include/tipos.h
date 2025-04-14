@@ -10,19 +10,25 @@ typedef struct Usuario {
 } Usuario;
 
 typedef struct Carteira {
-    double reais;
-    double bitcoin;
-    double ethereum;
-    double ripple;
+    double Reais;
+    double Bitcoin;
+    double Ethereum;
+    double Ripple;
 } Carteira;
 
 typedef struct Cotacoes {
-    double cotacoes[3];
+    double Bitcoin;
+    double Ethereum;
+    double Ripple;
 } Cotacoes;
 
 typedef struct Taxas {
-    double compra[3];
-    double venda[3];
+    double c_bitcoin;
+    double v_bitcoin;
+    double c_ethereum;
+    double v_ethereum;
+    double c_ripple;
+    double v_ripple;
 } Taxas;
 
 #endif

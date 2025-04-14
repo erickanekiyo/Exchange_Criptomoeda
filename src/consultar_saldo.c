@@ -15,10 +15,10 @@ void tela_saldo() {
 void consultando(Usuario* usuario, Carteira* carteira) {
     printf("Nome: %s\n", usuario->nome);
     printf("CPF: %s\n", formatar_cpf(usuario->cpf));
-    printf("\nReais: R$ %.2f\n", carteira->reais);
-    printf("Bitcoin: BTC %.8f\n", carteira->bitcoin);
-    printf("Ethereum: ETH %.8f\n", carteira->ethereum);
-    printf("Ripple: XRP %.2f\n", carteira->ripple);
+    printf("\nReais: R$ %.2f\n", carteira->Reais);
+    printf("Bitcoin: BTC %.8f\n", carteira->Bitcoin);
+    printf("Ethereum: ETH %.8f\n", carteira->Ethereum);
+    printf("Ripple: XRP %.2f\n", carteira->Ripple);
 }
 
 void verificacao(Usuario* usuario, Carteira* carteira) {

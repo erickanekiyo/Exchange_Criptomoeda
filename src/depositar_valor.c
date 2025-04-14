@@ -12,7 +12,7 @@ void tela_depositar() {
 }
 
 void qtd_carteira(Carteira* carteira) {
-    printf("                   <[ R$%.2f ]>\n", carteira->reais);
+    printf("                   <[ R$%.2f ]>\n", carteira->Reais);
 }
 
 void depositar(Usuario* usuario, Carteira* carteira) {
@@ -23,7 +23,7 @@ void depositar(Usuario* usuario, Carteira* carteira) {
     printf("Digite o valor a ser depositado: ");
     scanf("%lf", &valor);
 
-    carteira->reais += valor;
+    carteira->Reais += valor;
 
     system("cls || clear");
     tela_depositar();
