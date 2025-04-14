@@ -10,7 +10,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
     while (1) {
         printf("=====================================================\n");
         printf("======================= OPCOES ======================\n");
-        printf("=====================================================\n");
+        printf("=====================================================\n\n");
 
         printf("                1. Consultar saldo\n");
         printf("                2. Consultar extrato\n");
