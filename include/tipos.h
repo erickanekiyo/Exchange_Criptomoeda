@@ -11,7 +11,9 @@ typedef struct Usuario {
 
 typedef struct Carteira {
     double reais;
-    double cripto[3];
+    double bitcoin;
+    double ethereum;
+    double ripple;
 } Carteira;
 
 typedef struct Cotacoes {
