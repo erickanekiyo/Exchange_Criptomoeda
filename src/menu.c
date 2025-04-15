@@ -24,7 +24,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
         printf("\nDigite a opcao: ");
         scanf("%d", &opcao);
 
-        system("cls");
+        system("cls || clear");
 
         switch (opcao) {
             case 1: verificacao(usuario, carteira); break;
@@ -40,6 +40,6 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
 
         printf("\nPressione Enter para continuar...");
         getchar(); getchar();
-        system("cls");
+        system("cls || clear");
     }
 }
