@@ -28,7 +28,7 @@ void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* c
 
         switch (opcao) {
             case 1: verificacao(usuario, carteira); break;
-            case 2: printf("==> Consultar extrato\n"); break;
+            case 2: ver_extrato(usuario); break;
             case 3: depositar(usuario, carteira); break;
             case 4: printf("==> Sacar\n"); break;
             case 5: printf("==> Comprar criptomoedas\n"); break;
