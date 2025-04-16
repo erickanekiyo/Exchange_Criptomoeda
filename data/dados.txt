@@ -1,7 +1,6 @@
 nome: Joao Silva
 cpf: 98765432100
 senha: 4321
-Reais: 9000.00
 Reais: 10230.00
 Bitcoin: 0.00000000
 Ethereum: 0.00000000
@@ -9,7 +8,6 @@ Ripple: 0.00
 nome: Eric H. Kanekiyo
 cpf: 12345678900
 senha: 1234
-Reais: 5960.00
 Reais: 5800.00
 Bitcoin: 0.00634921
 Ethereum: 0.00000000

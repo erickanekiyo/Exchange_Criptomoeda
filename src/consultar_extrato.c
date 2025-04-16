@@ -15,21 +15,6 @@ void ver_extrato(Usuario* usuario) {
     int senha;
     tela_extrato();
 
-    printf("                 SENHA: ");
-    scanf("%d", &senha);
-
-    while (senha != usuario->senha) {
-        printf("               XXXXXXXXXXXXXXXXXXXX\n");
-        printf("               XXXXX INVÁLIDO XXXXX\n");
-        printf("               XXXXXXXXXXXXXXXXXXXX\n");
-
-        printf("                 SENHA: ");
-        scanf("%d", &senha);
-    }
-
-
-    system("cls || clear");
-
     char cpf_formatado[15];
 
     formatar_cpf(usuario->cpf, cpf_formatado);

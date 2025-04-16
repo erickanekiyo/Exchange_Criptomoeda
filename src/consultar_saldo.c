@@ -26,20 +26,5 @@ void consultando(Usuario* usuario, Carteira* carteira) {
 
 void verificacao(Usuario* usuario, Carteira* carteira) {
     tela_saldo();
-
-    int senha;
-    printf("                 SENHA: ");
-    scanf("%d", &senha);
-
-    while (senha != usuario->senha) {
-        printf("               XXXXXXXXXXXXXXXXXXXX\n");
-        printf("               XXXXX INVÁLIDO XXXXX\n");
-        printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
-        printf("                 SENHA: ");
-        scanf("%d", &senha);
-    }
-
-    system("cls || clear");
-    tela_saldo();
     consultando(usuario, carteira);
 }
