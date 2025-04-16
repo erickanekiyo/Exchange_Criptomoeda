@@ -20,11 +20,26 @@ int verificar_usuario(Usuario usuarios[], int total_usuarios, long long cpf, int
     return -1;
 }
 
+void tela_login() {
+    printf("=====================================================\n");
+    printf("======================= LOGIN =======================\n");
+    printf("=====================================================\n\n");
+    printf("-----------------------------------------------------\n\n");
+}
+
 int main() {
+    system("cls || clear");
     Usuario usuarios[MAX_USUARIOS];
     Carteira carteira;
     Cotacoes cotacoes;
     Taxas taxas;
+
+    taxas.c_bitcoin = 0.02;
+    taxas.v_bitcoin = 0.03;
+    taxas.c_ethereum = 0.01;
+    taxas.v_ethereum = 0.02;
+    taxas.c_ripple = 0.01;
+    taxas.v_ripple = 0.01;
 
     int total_usuarios = carregar_todos_os_usuarios(usuarios, MAX_USUARIOS);
 
@@ -36,6 +51,7 @@ int main() {
     printf("======================= LOGIN =======================\n");
     printf("=====================================================\n\n");
     printf("-----------------------------------------------------\n\n");
+    tela_login();
 
     while (indice == -1) {
         printf("CPF: ");
@@ -52,6 +68,8 @@ int main() {
             printf("======================= LOGIN =======================\n");
             printf("=====================================================\n\n");
             printf("-----------------------------------------------------\n\n");
+
+            tela_login();
 
             printf("           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
             printf("           XX CPF ou senha incorretos XX\n");
@@ -72,7 +90,10 @@ int main() {
     char extrato[100][256];
     int total_linhas = 0;
     carregar_extrato(nome_arquivo_extrato, extrato, &total_linhas);
+    carregar_cotacoes("data/cotacoes.txt", &cotacoes);
 
+    system("cls || clear");
+    tela_login();
 
     printf("Bem-vindo, %s!\n\n", usuario.nome);
     printf("Exibindo extrato:\n");
