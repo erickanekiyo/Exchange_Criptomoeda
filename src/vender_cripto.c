@@ -20,7 +20,7 @@ void invalidacao_venda() {
 
 void invalido_venda() {
     printf("\n               XXXXXXXXXXXXXXXXXXXX\n");
-    printf("               XXXXX INVÁLIDO XXXXX\n");
+    printf("               XXXXX INVALIDO XXXXX\n");
     printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
 }
 
