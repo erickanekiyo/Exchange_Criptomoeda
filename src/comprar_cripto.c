@@ -102,7 +102,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
             return;
         }
 
-        printf("\n\n     || Insira sua senha para confirmar a compra ||\n\n");
+        printf("\n\n   || Insira sua senha para confirmar a compra ||\n\n");
         printf("0. Sair\n\n");
         printf("                 SENHA: ");
         scanf("%d", &senha);
@@ -120,8 +120,8 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
             }
         }
 
-    system("cls || clear");
-    tela_comprar();
+        system("cls || clear");
+        tela_comprar();
 
 
         carteira->reais -= valor_retirado;

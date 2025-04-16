@@ -11,8 +11,15 @@ void tela_sacar() {
     printf("\n-----------------------------------------------------\n\n");
 }
 
+void sacar_invalido() {
+    printf("               XXXXXXXXXXXXXXXXXXXX\n");
+    printf("               XXXXX INVALIDO XXXXX\n");
+    printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
+}
+
 void sacar_valor(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
     float sacar_valor, novo_valor;
+    int senha;
 
     tela_sacar();
     printf("                   <[ R$%.2f ]>\n\n", carteira->reais);
@@ -32,6 +39,27 @@ void sacar_valor(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas
             printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n");
             continue;
         }
+
+        printf("\n\n   || Insira sua senha para confirmar a compra ||\n\n");
+        printf("0. Sair\n\n");
+        printf("                 SENHA: ");
+        scanf("%d", &senha);
+
+        if (senha == 0) {
+            return;
+        }
+
+        while (senha != usuario->senha) {
+            sacar_invalido();
+            printf("                 SENHA: ");
+            scanf("%d", &senha);
+            if (senha == 0) {
+                return;
+            }
+        }
+
+        system("cls || clear");
+        tela_sacar();
 
         carteira->reais = novo_valor;
 
