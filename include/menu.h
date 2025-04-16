@@ -7,6 +7,7 @@
 #include "consultar_extrato.h"
 #include "depositar_valor.h"
 #include "salvar_dados.h"
+#include "sacar_valor.h"
 #include "carregar_dados.h"
 #include "comprar_cripto.h"
 

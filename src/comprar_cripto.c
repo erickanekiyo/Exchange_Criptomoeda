@@ -136,6 +136,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         snprintf(
             linha, sizeof(linha),
             "+%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", comprar_valor, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
+            "-%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", comprar_valor, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
         );
         salvar_extrato(usuario, linha);
         salvar_dados_usuario(usuario, carteira);

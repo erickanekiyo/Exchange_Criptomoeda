@@ -4,6 +4,7 @@
 #include "../include/consultar_saldo.h"
 #include "../include/depositar_valor.h"
 #include "../include/comprar_cripto.h"
+#include "../include/sacar_valor.h"
 
 
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
@@ -31,7 +32,7 @@ void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas
             case 1: verificacao(usuario, carteira); break;
             case 2: ver_extrato(usuario); break;
             case 3: depositar(usuario, carteira); break;
-            case 4: printf("==> Sacar\n"); break;
+            case 4: sacar_valor(usuario, carteira, cotacoes, taxas); break;
             case 5: comprar_cripto(usuario, carteira, cotacoes, taxas); break;
             case 6: printf("==> Vender criptomoedas\n"); break;
             case 7: printf("==> Atualizar cotacao\n"); break;
