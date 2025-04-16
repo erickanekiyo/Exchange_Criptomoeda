@@ -6,7 +6,7 @@
 int carregar_dados_usuario(const char* nome_arquivo, Usuario* usuario, Carteira* carteira) {
     FILE* arquivo = fopen(nome_arquivo, "r");
     if (!arquivo) {
-        perror("Erro ao abrir o arquivo de dados do usuário");
+        perror("Erro ao abrir o arquivo de dados do usuario");
         return 0;
     }
 
@@ -92,7 +92,7 @@ int carregar_todos_os_usuarios(Usuario usuarios[], int max_usuarios) {
 int carregar_cotacoes(const char* nome_arquivo, Cotacoes* cotacoes) {
     FILE* arquivo = fopen(nome_arquivo, "r");
     if (!arquivo) {
-        perror("Erro ao abrir o arquivo de cotações");
+        perror("Erro ao abrir o arquivo de cotacoes");
         return 0;
     }
 

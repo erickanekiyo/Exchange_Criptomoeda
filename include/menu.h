@@ -11,6 +11,8 @@
 #include "carregar_dados.h"
 #include "comprar_cripto.h"
 #include "vender_cripto.h"
+#include "atualizar_cotacao.h"
+#include "random_cotacao.h"
 
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas);
 

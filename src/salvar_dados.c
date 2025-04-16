@@ -82,7 +82,7 @@ void salvar_extrato(Usuario* usuario, const char* linha) {
     if (num_registros >= 100) {
         FILE* arquivo_temp = fopen("data/temp.txt", "w");
         if (!arquivo_temp) {
-            perror("Erro ao abrir arquivo temporário");
+            perror("Erro ao abrir arquivo temporario");
             fclose(arquivo);
             return;
         }
