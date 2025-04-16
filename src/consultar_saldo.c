@@ -13,8 +13,11 @@ void tela_saldo() {
 }
 
 void consultando(Usuario* usuario, Carteira* carteira) {
+    char cpf_formatado[15];
+    formatar_cpf(usuario->cpf, cpf_formatado);
+
     printf("Nome: %s\n", usuario->nome);
-    printf("CPF: %s\n", formatar_cpf(usuario->cpf));
+    printf("CPF: %s\n", cpf_formatado);
     printf("\nReais: R$ %.2f\n", carteira->reais);
     printf("Bitcoin: BTC %.8f\n", carteira->bitcoin);
     printf("Ethereum: ETH %.8f\n", carteira->ethereum);

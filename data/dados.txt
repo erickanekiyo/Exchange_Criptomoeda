@@ -1,0 +1,70 @@
+nome: Joao Silva
+cpf: 98765432100
+senha: 4321
+Reais: 9000.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Eric H. Kanekiyo
+cpf: 12345678900
+senha: 1234
+Reais: 8400.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Ana Beatriz Costa  
+cpf: 11122233344
+senha: 5678
+Reais: 10800.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Rafael Torres Lima  
+cpf: 55566677788
+senha: 8765
+Reais: 7700.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Mariana Oliveira Souza  
+cpf: 99988877766
+senha: 1122
+Reais: 7500.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Bruno Cesar Almeida  
+cpf: 33344455566
+senha: 3344
+Reais: 10150.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Camila Ramos Ferreira  
+cpf: 77788899900
+senha: 7788
+Reais: 5580.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Felipe Augusto Nunes  
+cpf: 22233344455
+senha: 2233
+Reais: 8940.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Larissa Duarte Melo  
+cpf: 44455566677
+senha: 4455
+Reais: 10620.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
+nome: Thiago Henrique Barbosa  
+cpf: 66677788899
+senha: 6677
+Reais: 7430.00
+Bitcoin: 0.00000000
+Ethereum: 0.00000000
+Ripple: 0.00
