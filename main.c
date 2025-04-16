@@ -12,7 +12,6 @@
 
 int verificar_usuario(Usuario usuarios[], int total_usuarios, long long cpf, int senha) {
     for (int i = 0; i < total_usuarios; i++) {
-        printf("Verificando usuario %d: %lld com CPF: %lld e senha: %d\n", i, usuarios[i].cpf, cpf, usuarios[i].senha);
         if (usuarios[i].cpf == cpf && usuarios[i].senha == senha) {
             return i;
         }
@@ -47,10 +46,6 @@ int main() {
     int senha_input;
     int indice = -1;
 
-    printf("=====================================================\n");
-    printf("======================= LOGIN =======================\n");
-    printf("=====================================================\n\n");
-    printf("-----------------------------------------------------\n\n");
     tela_login();
 
     while (indice == -1) {
@@ -64,10 +59,6 @@ int main() {
 
         if (indice == -1) {
             system("cls || clear");
-            printf("=====================================================\n");
-            printf("======================= LOGIN =======================\n");
-            printf("=====================================================\n\n");
-            printf("-----------------------------------------------------\n\n");
 
             tela_login();
 
@@ -78,8 +69,6 @@ int main() {
     }
 
     Usuario usuario = usuarios[indice];
-
-    printf("Usuario selecionado após login: %s - CPF: %lld\n", usuario.nome, usuario.cpf);
 
     char nome_arquivo_usuario[] = "data/dados.txt";
     carregar_dados_usuario(nome_arquivo_usuario, &usuario, &carteira);
@@ -96,10 +85,6 @@ int main() {
     tela_login();
 
     printf("Bem-vindo, %s!\n\n", usuario.nome);
-    printf("Exibindo extrato:\n");
-    for (int i = 0; i < total_linhas; i++) {
-        printf("%s", extrato[i]);
-    }
 
     menu(&usuario, &carteira, &cotacoes, &taxas);
 

@@ -17,15 +17,11 @@ typedef struct Carteira {
 } Carteira;
 
 typedef struct Cotacoes {
-    double cotacoes[3];
     double bitcoin;
     double ethereum;
     double ripple;
 } Cotacoes;
 
-typedef struct Taxas {
-    double compra[3];
-    double venda[3];
 typedef struct {
     float c_bitcoin;
     float v_bitcoin;

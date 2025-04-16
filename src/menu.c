@@ -6,7 +6,6 @@
 #include "../include/comprar_cripto.h"
 
 
-void menu(struct Usuario* usuario, struct Carteira* carteira, struct Cotacoes* cotacoes, struct Taxas* taxas) {
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
     int opcao;
     while (1) {
@@ -33,7 +32,6 @@ void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas
             case 2: ver_extrato(usuario); break;
             case 3: depositar(usuario, carteira); break;
             case 4: printf("==> Sacar\n"); break;
-            case 5: printf("==> Comprar criptomoedas\n"); break;
             case 5: comprar_cripto(usuario, carteira, cotacoes, taxas); break;
             case 6: printf("==> Vender criptomoedas\n"); break;
             case 7: printf("==> Atualizar cotacao\n"); break;

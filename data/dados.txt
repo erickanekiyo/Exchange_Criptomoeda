@@ -8,8 +8,6 @@ Ripple: 0.00
 nome: Eric H. Kanekiyo
 cpf: 12345678900
 senha: 1234
-Reais: 8400.00
-Bitcoin: 0.00000000
 Reais: 5960.00
 Bitcoin: 0.00634921
 Ethereum: 0.00000000
