@@ -102,7 +102,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
             return;
         }
 
-        printf("\n\n     || Insira sua senha para confirmar a compra ||\n\n");
+        printf("\n\n   || Insira sua senha para confirmar a compra ||\n\n");
         printf("0. Sair\n\n");
         printf("                 SENHA: ");
         scanf("%d", &senha);
@@ -120,8 +120,8 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
             }
         }
 
-    system("cls || clear");
-    tela_comprar();
+        system("cls || clear");
+        tela_comprar();
 
 
         carteira->reais -= valor_retirado;
@@ -135,7 +135,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         char linha[300];
         snprintf(
             linha, sizeof(linha),
-            "+%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", comprar_valor, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
+            "-%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", comprar_valor, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
         );
         salvar_extrato(usuario, linha);
         salvar_dados_usuario(usuario, carteira);
