@@ -82,10 +82,32 @@ int carregar_todos_os_usuarios(Usuario usuarios[], int max_usuarios) {
     while (total < max_usuarios &&
         fscanf(arquivo, "nome: %[^\n]\ncpf: %lld\nsenha: %d\nReais: %*f\nBitcoin: %*f\nEthereum: %*f\nRipple: %*f\n",
             usuarios[total].nome, &usuarios[total].cpf, &usuarios[total].senha) == 3) {
-        printf("Usuario carregado: %s - CPF: %lld - Senha: %d\n", usuarios[total].nome, usuarios[total].cpf, usuarios[total].senha);
         total++;
     }
 
     fclose(arquivo);
     return total;
+}
+
+int carregar_cotacoes(const char* nome_arquivo, Cotacoes* cotacoes) {
+    FILE* arquivo = fopen(nome_arquivo, "r");
+    if (!arquivo) {
+        perror("Erro ao abrir o arquivo de cotações");
+        return 0;
+    }
+
+    char linha[256];
+
+    while (fgets(linha, sizeof(linha), arquivo)) {
+        if (strncmp(linha, "Bitcoin:", 8) == 0) {
+            sscanf(linha, "Bitcoin: %lf", &cotacoes->bitcoin);
+        } else if (strncmp(linha, "Ethereum:", 9) == 0) {
+            sscanf(linha, "Ethereum: %lf", &cotacoes->ethereum);
+        } else if (strncmp(linha, "Ripple:", 7) == 0) {
+            sscanf(linha, "Ripple: %lf", &cotacoes->ripple);
+        }
+    }
+
+    fclose(arquivo);
+    return 1;
 }

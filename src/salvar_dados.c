@@ -117,3 +117,17 @@ void salvar_extrato(Usuario* usuario, const char* linha) {
 
     fclose(arquivo);
 }
+
+void salvar_cotacoes(const Cotacoes* cotacoes) {
+    FILE* arquivo = fopen("data/cotacoes.txt", "w");
+    if (!arquivo) {
+        perror("Erro ao abrir o arquivo de cotações");
+        return;
+    }
+
+    fprintf(arquivo, "Bitcoin: %.2f\n", cotacoes->bitcoin);
+    fprintf(arquivo, "Ethereum: %.2f\n", cotacoes->ethereum);
+    fprintf(arquivo, "Ripple: %.2f\n", cotacoes->ripple);
+
+    fclose(arquivo);
+}

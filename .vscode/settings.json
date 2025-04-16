@@ -6,6 +6,7 @@
         "format_cpf.h": "c",
         "stdlib.h": "c",
         "consultar_saldo.h": "c",
-        "salvar_dados.h": "c"
+        "salvar_dados.h": "c",
+        "comprar_cripto.h": "c"
     }
 }
