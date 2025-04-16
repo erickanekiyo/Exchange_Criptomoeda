@@ -5,5 +5,6 @@
 
 void salvar_dados_usuario(Usuario* usuario, Carteira* carteira);
 void salvar_extrato(Usuario* usuario, const char* linha);
+void salvar_cotacoes(const Cotacoes* cotacoes);
 
 #endif

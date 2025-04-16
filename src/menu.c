@@ -6,6 +6,7 @@
 #include "../include/comprar_cripto.h"
 #include "../include/sacar_valor.h"
 #include "../include/vender_cripto.h"
+#include "../include/atualizar_cotacao.h"
 
 
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
@@ -36,7 +37,7 @@ void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas
             case 4: sacar_valor(usuario, carteira, cotacoes, taxas); break;
             case 5: comprar_cripto(usuario, carteira, cotacoes, taxas); break;
             case 6: vender_cripto(usuario, carteira, cotacoes, taxas); break;
-            case 7: printf("==> Atualizar cotacao\n"); break;
+            case 7: atualizar_cotacao(cotacoes, taxas); break;
             case 8: printf("Saindo...\n"); exit(0);
             default: printf("Opcao invalida.\n");
         }
