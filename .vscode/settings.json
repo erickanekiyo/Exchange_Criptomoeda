@@ -8,6 +8,7 @@
         "consultar_saldo.h": "c",
         "salvar_dados.h": "c",
         "comprar_cripto.h": "c",
-        "depositar_valor.h": "c"
+        "depositar_valor.h": "c",
+        "sacar_valor.h": "c"
     }
 }

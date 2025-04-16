@@ -10,6 +10,7 @@
 #include "sacar_valor.h"
 #include "carregar_dados.h"
 #include "comprar_cripto.h"
+#include "vender_cripto.h"
 
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas);
 

@@ -13,7 +13,7 @@ void tela_depositar() {
 }
 
 void qtd_carteira(Carteira* carteira) {
-    printf("                   <[ R$%.2f ]>\n", carteira->reais);
+    printf("                   <[ R$%.2f ]>\n\n", carteira->reais);
 }
 
 void depositar(Usuario* usuario, Carteira* carteira) {
@@ -29,7 +29,7 @@ void depositar(Usuario* usuario, Carteira* carteira) {
     system("cls || clear");
     tela_depositar();
 
-    printf("   DEPOSITO REALIZADO!  <[ R$%.2f ]>\n", valor);
+    printf("   DEPOSITO REALIZADO!  <[ R$%.2f ]>\n\n", valor);
     consultando(usuario, carteira);
     salvar_dados_usuario(usuario, carteira);
 

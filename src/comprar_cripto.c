@@ -20,7 +20,7 @@ void invalidacao() {
 }
 
 void invalido() {
-    printf("               XXXXXXXXXXXXXXXXXXXX\n");
+    printf("\n               XXXXXXXXXXXXXXXXXXXX\n");
     printf("               XXXXX INVALIDO XXXXX\n");
     printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
 }
@@ -135,7 +135,7 @@ void comprar_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Ta
         char linha[300];
         snprintf(
             linha, sizeof(linha),
-            "-%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", comprar_valor, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
+            "+%.8f %s CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", conversao, nome_moeda, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
         );
         salvar_extrato(usuario, linha);
         salvar_dados_usuario(usuario, carteira);
