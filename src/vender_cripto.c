@@ -131,17 +131,18 @@ void vender_cripto(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Tax
         carteira->reais += valor_vendido;
 
         salvar_dados_usuario(usuario, carteira);
+
+        const char* nome_moeda = tipo_moeda == 1 ? "BTC" : tipo_moeda == 2 ? "ETH" : "XRP";
         char linha[300];
         snprintf(
             linha, sizeof(linha),
-            "+%.2f REAL CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", conversao, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
+            "-%.8f %s CT: %.1f  TX: %.2f REAL: %.2f BTC: %.8f ETH: %.8f XRP: %.2f", vender_valor, nome_moeda, float_cota, taxa, carteira->reais, carteira->bitcoin, carteira->ethereum, carteira->ripple
         );
         salvar_extrato(usuario, linha);
 
         system("cls || clear");
         tela_vender();
 
-        const char* nome_moeda = tipo_moeda == 1 ? "BTC" : tipo_moeda == 2 ? "ETH" : "XRP";
         printf("VENDA EFETUADA!\n\n");
         printf("<[%.8f]>%s  ==> <[R$%.2f - TX:%.2f]>\n\n", vender_valor, nome_moeda, valor_vendido, taxa);
         consultando(usuario, carteira);

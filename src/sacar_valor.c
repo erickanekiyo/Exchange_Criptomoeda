@@ -12,7 +12,7 @@ void tela_sacar() {
 }
 
 void sacar_invalido() {
-    printf("               XXXXXXXXXXXXXXXXXXXX\n");
+    printf("\n               XXXXXXXXXXXXXXXXXXXX\n");
     printf("               XXXXX INVALIDO XXXXX\n");
     printf("               XXXXXXXXXXXXXXXXXXXX\n\n");
 }
