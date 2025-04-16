@@ -5,6 +5,7 @@
 #include "../include/depositar_valor.h"
 #include "../include/comprar_cripto.h"
 #include "../include/sacar_valor.h"
+#include "../include/vender_cripto.h"
 
 
 void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas) {
@@ -34,7 +35,7 @@ void menu(Usuario* usuario, Carteira* carteira, Cotacoes* cotacoes, Taxas* taxas
             case 3: depositar(usuario, carteira); break;
             case 4: sacar_valor(usuario, carteira, cotacoes, taxas); break;
             case 5: comprar_cripto(usuario, carteira, cotacoes, taxas); break;
-            case 6: printf("==> Vender criptomoedas\n"); break;
+            case 6: vender_cripto(usuario, carteira, cotacoes, taxas); break;
             case 7: printf("==> Atualizar cotacao\n"); break;
             case 8: printf("Saindo...\n"); exit(0);
             default: printf("Opcao invalida.\n");
